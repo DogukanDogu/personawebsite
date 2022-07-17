@@ -1,0 +1,43 @@
+[debug] [2022-07-12T14:41:36.599Z] ----------------------------------------------------------------------
+[debug] [2022-07-12T14:41:36.601Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\dogu8\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-07-12T14:41:36.601Z] CLI Version:   11.2.1
+[debug] [2022-07-12T14:41:36.601Z] Platform:      win32
+[debug] [2022-07-12T14:41:36.601Z] Node Version:  v16.16.0
+[debug] [2022-07-12T14:41:36.602Z] Time:          Tue Jul 12 2022 17:41:36 GMT+0300 (GMT+03:00)
+[debug] [2022-07-12T14:41:36.602Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-12T14:41:36.660Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-12T14:41:36.660Z] > authorizing via signed-in user (dogukan.dogu@gmail.com)
+[debug] [2022-07-12T14:41:36.661Z] [iam] checking project personalwebsite-37ab1 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-07-12T14:41:36.663Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/personalwebsite-37ab1:testIamPermissions [none]
+[debug] [2022-07-12T14:41:36.663Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/personalwebsite-37ab1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-12T14:41:37.642Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/personalwebsite-37ab1:testIamPermissions 200
+[debug] [2022-07-12T14:41:37.642Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/personalwebsite-37ab1:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-12T14:41:37.643Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personalwebsite-37ab1 [none]
+[debug] [2022-07-12T14:41:38.058Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personalwebsite-37ab1 200
+[debug] [2022-07-12T14:41:38.059Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personalwebsite-37ab1 {"projectId":"personalwebsite-37ab1","projectNumber":"1032747825902","displayName":"PersonalWebSite","name":"projects/personalwebsite-37ab1","resources":{"hostingSite":"personalwebsite-37ab1","storageBucket":"personalwebsite-37ab1.appspot.com","locationId":"europe-west2"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'personalwebsite-37ab1'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-07-12T14:41:38.062Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/personalwebsite-37ab1 [none]
+[debug] [2022-07-12T14:41:38.417Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/personalwebsite-37ab1 200
+[debug] [2022-07-12T14:41:38.417Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/personalwebsite-37ab1 {"projectId":"personalwebsite-37ab1","projectNumber":"1032747825902","displayName":"PersonalWebSite","name":"projects/personalwebsite-37ab1","resources":{"hostingSite":"personalwebsite-37ab1","storageBucket":"personalwebsite-37ab1.appspot.com","locationId":"europe-west2"},"state":"ACTIVE"}
+[debug] [2022-07-12T14:41:38.419Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1032747825902/sites/personalwebsite-37ab1/versions [none]
+[debug] [2022-07-12T14:41:38.419Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1032747825902/sites/personalwebsite-37ab1/versions {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-07-12T14:41:39.855Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1032747825902/sites/personalwebsite-37ab1/versions 500
+[debug] [2022-07-12T14:41:39.855Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1032747825902/sites/personalwebsite-37ab1/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2022-07-12T14:41:40.017Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
